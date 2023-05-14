@@ -6,7 +6,7 @@ function Footer() {
 	return (
         <footer>
             <ul>
-                <li> <a href=" ">Administrador</a></li>
+                <li> <a href="./admin/">Administrador</a></li>
             </ul>
         </footer>
     );

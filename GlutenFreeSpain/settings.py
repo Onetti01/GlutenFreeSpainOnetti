@@ -33,7 +33,12 @@ DJANGO_APPS = [
 ]
 
 PROJECT_APPS = [
-
+    "apps.Bills",
+    "apps.Categories",
+    "apps.Products",
+    "apps.Sponsors",
+    "apps.suscriptionTypes",
+    "apps.Users",
 ]
 
 THIRD_PARTY_APPS = [
@@ -130,7 +135,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'es'
 
-TIME_ZONE = 'UTC+2'
+TIME_ZONE = 'Europe/Madrid'
 
 USE_I18N = True
 USE_L10N = True
