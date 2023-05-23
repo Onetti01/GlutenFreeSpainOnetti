@@ -16,28 +16,33 @@ function Register() {
 			"(^|;)\\s*csrftoken\\s*=\\s*([^;]+)"
 		);
 		const csrfToken = csrfCookie ? csrfCookie.pop() : null;
-		fetch("./api/Users/create/", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-				"X-CSRFToken": csrfToken,
-			},
-			body: JSON.stringify({
-				name: formData.nombre,
-				last_name: formData.apellidos,
-				email: formData.email,
-				password: formData.contrasenha,
-				birth_date: formData.birth_date,
-			}),
-		})
+		fetch(
+			// "http://localhost:8000/api/Users/create/",
+			"/api/Users/create/",
+			{
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					"X-CSRFToken": csrfToken,
+				},
+				body: JSON.stringify({
+					name: formData.nombre,
+					last_name: formData.apellidos,
+					email: formData.email,
+					password: formData.contrasenha,
+					birth_date: formData.birth_date,
+				}),
+			}
+		)
 			.then((response) => {
 				if (!response.ok) {
 					return response.json();
 				}
+				window.location.href = "/Login";
 			})
 			.then((data) => {
 				//errores
-				console.log(data)
+				console.log(data);
 			});
 	}
 
@@ -57,7 +62,7 @@ function Register() {
 
 	return (
 		<MainLayout>
-			<div className="xd">
+			<div className="register">
 				<div className="div-center">
 					<div className="card login" style={{ marginTop: "50px" }}>
 						<div className="login-img div-center">

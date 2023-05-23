@@ -17,22 +17,26 @@ code {
 footer {
   width: 100%;
   height: 100px;
-  background-color: cadetblue;
+  background-color: #5f9ea0;
+  background-image: url("assets/img/pagePattern_blue.png");
+  background-repeat: repeat;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#root{
+#root {
   height: 100%;
 }
 
 main {
-  min-height: calc(100% - 210px);
+  min-height: calc(100% - 170px);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0px;
+  background-image: url("assets/img/pagePattern_beige.png");
+  background-repeat: repeat;
+  z-index: 0;
 }
 
 html {
@@ -45,7 +49,7 @@ body {
   height: 100%;
 }
 
-.sesiones{
+.sesiones {
   display: flex;
   margin: 0px;
   padding: 0px;
@@ -55,14 +59,14 @@ body {
   width: 100%;
 }
 
-.sesiones button{
+.sesiones button {
   padding: 5px 20px;
   margin: 0px 20px;
   border-radius: 5px;
   border-color: transparent;
 }
 
-.sesiones button:hover{
+.sesiones button:hover {
   background-color: rgb(101, 189, 83);
 }
 
@@ -82,30 +86,6 @@ li {
 a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.7);
-}
-
-header {
-  width: 100%;
-  height: 70px;
-  background-color: cadetblue;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.header-link{
-  display: flex;
-  align-items: center;
-  height: 70px;
-  padding: 0px 10px;
-  border-radius: 10px;
-}
-.header-link *{
-  margin-right: 10px;
-}
-
-.header-link:hover{
-  background-color: rgb(70, 122, 124);
 }
 
 .div-center {
@@ -190,4 +170,42 @@ form {
 
 .form-div-stile input:focus {
   outline: none;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.top4-products {
+  padding: 10px 20px;
+}
+
+.products {
+  background-color: rgba(255, 255, 255, 0.801);
+  padding: 15px;
+  margin: 5px 0px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.desc {
+  width: 800px;
+  margin: 0px;
+}
+
+.products img:not(.vegetarian) {
+  height: 240px;
+  border-radius: 20px;
+  width: 240px;
+  margin: 0px 20px;
+}
+
+.register{
+  margin-bottom: 20px;
+}
+
+.custom-link:hover, a:not(.header-link):hover{
+  text-decoration: underline;
 }

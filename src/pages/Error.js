@@ -1,7 +1,6 @@
 /** @format */
 
 import MainLayout from "hocs/layouts/MainLayout";
-import { connect } from "react-redux";
 
 function Error() {
 	return (
@@ -11,6 +10,5 @@ function Error() {
 	);
 }
 
-const mapStateToProps = (state) => ({});
 
-export default connect(mapStateToProps, {})(Error);
+export default Error;

@@ -7,6 +7,7 @@ import { useState } from "react";
 
 function Login() {
 	let [formData, setFormData] = useState({});
+
 	let handleChange = (event) => {
 		const fieldName = event.target.name;
 		const value = event.target.value;
@@ -18,20 +19,26 @@ function Login() {
 			"(^|;)\\s*csrftoken\\s*=\\s*([^;]+)"
 		);
 		const csrfToken = csrfCookie ? csrfCookie.pop() : null;
-		fetch("./api/Users/login/", {
-			method: "POST",
-			body: JSON.stringify({
-				email: formData.email,
-				password: formData.password,
-			}),
-			headers: {
-				"Content-Type": "application/json",
-				"X-CSRFToken": csrfToken,
-			},
-		})
+		fetch(
+			// "http://localhost:8000/api/Users/login/",
+			"/api/Users/login/",
+			{
+				method: "POST",
+				body: JSON.stringify({
+					email: formData.email,
+					password: formData.password,
+				}),
+				headers: {
+					"Content-Type": "application/json",
+					"X-CSRFToken": csrfToken,
+				},
+			}
+		)
 			.then((response) => {
 				if (!response.ok) {
 					return response.json();
+				} else {
+					window.location.href = "/";
 				}
 			})
 			.then((data) => {
@@ -39,10 +46,12 @@ function Login() {
 				console.log(data);
 			});
 	}
+
 	function Login(e) {
 		e.preventDefault();
 		EnviarLogin();
 	}
+
 	return (
 		<MainLayout>
 			<div className="div-center">
@@ -54,7 +63,7 @@ function Login() {
 							alt=""></img>
 					</div>
 					<div style={{ display: "flex", justifyContent: "center" }}>
-						<form>
+						<form onSubmit={Login} method="POST">
 							<p
 								style={{
 									fontSize: "30px",
@@ -79,8 +88,8 @@ function Login() {
 								<input
 									type="password"
 									placeholder="Contraseña"
-									name="contrasenha"
-									value={formData.contrasenha}
+									name="password"
+									value={formData.password}
 									onChange={handleChange}
 									required></input>
 							</div>
@@ -88,7 +97,6 @@ function Login() {
 								className="form-div-stile"
 								style={{ width: "auto" }}>
 								<input
-									onClick={Login}
 									type="submit"
 									value="Ingresar"
 									style={{
@@ -103,7 +111,7 @@ function Login() {
 									display: "flex",
 									justifyContent: "center",
 								}}>
-								<a style={{ color: "black" }} href="./Register">
+								<a style={{ color: "black" }} href="/Register">
 									Registrarse
 								</a>
 							</div>

@@ -7,12 +7,10 @@ import Error from "pages/Error";
 import Home from "pages/Home";
 import Login from "pages/Login";
 import Register from "pages/Register";
+import Products from "pages/Products";
+import IndvProduct from "pages/IndvProduct";
 
 function App() {
-	// fetch("./api/Users/list").then((res)=> res.json())
-	// .then(data =>{
-	// 	console.log(data)
-	// })
 	return (
 		<Router>
 			<Routes>
@@ -23,6 +21,12 @@ function App() {
 				<Route path="/Login" element={<Login></Login>}></Route>
 
 				<Route path="/Register" element={<Register></Register>}></Route>
+
+				<Route path="/Products" element={<Products></Products>}></Route>
+
+				<Route
+					path="/Products/:id"
+					element={<IndvProduct></IndvProduct>}></Route>
 			</Routes>
 		</Router>
 	);

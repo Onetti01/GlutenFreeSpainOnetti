@@ -16,3 +16,6 @@ class Users(models.Model):
 
     def __str__(self):
         return self.name
+
+    def check_password(self, raw_password):
+        return self.password == raw_password.strip()

@@ -1,0 +1,88 @@
+.header-user {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 0px 10px;
+    min-width: 150px;
+    margin-right: 20px;
+}
+
+.header-user:hover {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 0px 10px;
+    border-radius: 10px;
+    z-index: 2;
+    background-color: rgba(70, 122, 124, 0.555);
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    background-image: url("assets/img/pagePattern_blue.png");
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-link {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+
+.header-link *,
+.header-user * {
+    margin-right: 10px;
+}
+
+.header-link:hover {
+    background-color: rgba(70, 122, 124, 0.555);
+}
+
+.user-menu ul {
+    margin: 3px 0px;
+}
+
+.menu-user-links{
+    width: 150px;
+}
+
+.user-menu-li:hover {
+    background-color: #534486;
+}
+
+.hidden {
+    display: none;
+}
+
+.user-menu {
+    position: fixed;
+    background-color: #8375BC;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    top: 70px;
+    width: 150px;
+    z-index: 1;
+}
+
+.user-menu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#closeSesion button {
+    background-color: transparent;
+    border: none;
+    margin: 0px;
+    padding: 10px;
+    font-size: 15px;
+}

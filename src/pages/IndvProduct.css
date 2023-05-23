@@ -1,0 +1,16 @@
+.product-indv-detail {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.comentarios {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 30px;
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}

@@ -13,4 +13,5 @@ class ProductsSerializer(serializers.ModelSerializer):
             'is_vegetarian',
             'category',
             'image',
+            'votaciones'
         ]
