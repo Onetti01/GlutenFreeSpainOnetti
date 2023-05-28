@@ -18,8 +18,8 @@ function Footer() {
 				setBills(
 					data.Bills.filter(
 						(obj) =>
-							obj.fields.suscription === 2 ||
-							obj.fields.suscription === 4
+							obj.fields.suscription === 3 ||
+							obj.fields.suscription === 1
 					).map((obj) => obj.fields.CIF_sponsor)
 				);
 			} catch (error) {
@@ -48,12 +48,19 @@ function Footer() {
 	return (
 		<footer>
 			<div className="sponsors-imgs">
-				{Sponsors.map((element) => {
-					if (Bills.includes(element.CIF)) {
-						return <img src={element.icon} alt="sponsorImg" />;
-					}
-					return <></>;
-				})}
+				{Sponsors ?
+					<>
+						{Sponsors.map((element) => {
+							if (Bills.includes(element.CIF)) {
+								return <img src={element.icon} alt="sponsorImg" />;
+							}
+							return <></>;
+						})}
+					</>
+					:
+					<></>
+				}
+
 			</div>
 			<ul>
 				<li>

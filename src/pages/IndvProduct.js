@@ -40,8 +40,8 @@ function IndvProduct(props) {
 				setBills(
 					data.Bills.filter(
 						(obj) =>
-							obj.fields.suscription === 3 ||
-							obj.fields.suscription === 4
+							obj.fields.suscription === 2 ||
+							obj.fields.suscription === 1
 					).map((obj) => obj.fields.CIF_sponsor)
 				);
 			} catch (error) {
