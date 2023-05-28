@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.19c8dfd2.css",
+    "main.css": "/static/css/main.e5fc85b9.css",
     "main.js": "/static/js/main.3c59802f.js",
     "static/media/banner.jpg": "/static/media/banner.9f4dbb5032a99dbae8fb.jpg",
     "static/media/vegetariano_adobe_express.svg": "/static/media/vegetariano_adobe_express.7f6bd809b3772b290bb478637847ea6c.svg",
@@ -11,11 +11,11 @@
     "index.html": "/index.html",
     "static/media/login-user.svg": "/static/media/login-user.2895163d32d3f4ef7925f5dd19a75718.svg",
     "static/media/cerrar-sesion.svg": "/static/media/cerrar-sesion.ad3e4853064648eeffd5d77d4c64cdf6.svg",
-    "main.19c8dfd2.css.map": "/static/css/main.19c8dfd2.css.map",
+    "main.e5fc85b9.css.map": "/static/css/main.e5fc85b9.css.map",
     "main.3c59802f.js.map": "/static/js/main.3c59802f.js.map"
   },
   "entrypoints": [
-    "static/css/main.19c8dfd2.css",
+    "static/css/main.e5fc85b9.css",
     "static/js/main.3c59802f.js"
   ]
 }

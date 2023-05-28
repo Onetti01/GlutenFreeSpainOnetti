@@ -15,13 +15,13 @@ code {
 }
 
 h2{
-  color: white;
+  color: #61338b;
 }
 
 footer {
   width: 100%;
   height: 100px;
-  background-color: #61338b;
+  background-color:#61338b;
   /* background-image: url("assets/img/pagePattern_blue.png"); */
   /* background-repeat: repeat; */
   display: flex;
