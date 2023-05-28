@@ -1,5 +1,5 @@
 /** @format */
-import MainLayout from "hocs/layouts/MainLayout";
+import GeneralLayout from "layouts/GeneralLayout";
 import loginUser from "../assets/svg/login-user.svg";
 import correo from "../assets/svg/correo.svg";
 import password from "../assets/svg/contraseña.svg";
@@ -53,7 +53,7 @@ function Login() {
 	}
 
 	return (
-		<MainLayout>
+		<GeneralLayout>
 			<div className="div-center">
 				<div className="card login">
 					<div className="login-img div-center">
@@ -119,7 +119,7 @@ function Login() {
 					</div>
 				</div>
 			</div>
-		</MainLayout>
+		</GeneralLayout>
 	);
 }
 

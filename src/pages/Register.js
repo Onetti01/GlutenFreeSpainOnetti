@@ -1,5 +1,5 @@
 /** @format */
-import MainLayout from "hocs/layouts/MainLayout";
+import MainLayout from "layouts/MainLayout";
 import loginUser from "../assets/svg/login-user.svg";
 import { useState } from "react";
 

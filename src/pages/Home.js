@@ -1,12 +1,12 @@
 /** @format */
 
-import MainLayout from "hocs/layouts/MainLayout";
+import MainLayout from "layouts/MainLayout";
 import React, { useState, useEffect } from "react";
 import baner from "../assets/img/banner.jpg";
 import vegetarian from "../assets/svg/vegetariano_adobe_express.svg";
 import not_vegetarian from "../assets/svg/no-vegetarian_adobe_express.svg";
 import { Link } from "react-router-dom";
-import "./Home.css"
+import "./Home.css";
 
 function Home() {
 	const [top4Objetos, setTop4Objetos] = useState([]);
@@ -36,6 +36,7 @@ function Home() {
 				<div className="banner">
 					<img src={baner} alt="Banner"></img>
 				</div>
+
 				<hr />
 				<h2>Productos destacados</h2>
 				<hr />
@@ -50,7 +51,8 @@ function Home() {
 											alt="imagen-producto"
 										/>
 										<div className="informacion">
-											<Link className="custom-link"
+											<Link
+												className="custom-link"
 												to={"/Products/" + product.id}>
 												<h3>{product.name}</h3>
 											</Link>
@@ -121,7 +123,9 @@ function Home() {
 					})}
 				</div>
 				<span className="view-more">
-					<Link className="custom-link" to="/Products">Ver mas ➤</Link>
+					<Link className="custom-link" to="/Products">
+						Ver mas ➤
+					</Link>
 				</span>
 			</div>
 		</MainLayout>

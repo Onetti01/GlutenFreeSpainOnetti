@@ -1,10 +1,10 @@
 /** @format */
 
-import home from "../../src/assets/svg/home.svg";
 import loginUser from "../assets/svg/login-user.svg";
 import logOut from "../assets/svg/cerrar-sesion.svg";
 import "./Header.css";
 import React, { useState } from "react";
+import logo from "../assets/svg/logo.svg";
 
 function Header() {
 	const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -21,8 +21,6 @@ function Header() {
 		document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
 	}
 
-	// Ejemplo de uso
-
 	function cerrarSesion(e) {
 		deleteCookie("user_id");
 		deleteCookie("name");
@@ -33,33 +31,43 @@ function Header() {
 	function getCookieValue(cookieName) {
 		const cookieString = document.cookie;
 		const cookies = cookieString.split(";");
-
 		for (let i = 0; i < cookies.length; i++) {
 			const cookie = cookies[i].trim();
 			if (cookie.startsWith(cookieName + "=")) {
-				return cookie.substring(cookieName.length + 1);
+				const cookieValue = cookie.substring(cookieName.length + 1);
+				return decodeURIComponent(cookieValue);
 			}
 		}
-
 		return null;
 	}
-	let usuario = getCookieValue("name");
+
+	let usuario = getCookieValue("name")
+		? getCookieValue("name").split(":")[0]
+		: null;
 
 	return (
 		<header>
-			<ul>
-				<li>
-					<a href="/" className="header-link">
-						<img src={home} alt="home" height="20px" />
-						Home
-					</a>
-				</li>
-				<li>
-					<a href="/Products" className="header-link">
-						Productos
-					</a>
-				</li>
-			</ul>
+			<div className="navbar">
+				<ul>
+					<li>
+						<a href="/" className="header-link logo-img">
+							<img src={logo} alt="home" height="35px" />
+							Home
+						</a>
+					</li>
+					<li>
+						<a href="/Products" className="header-link">
+							Productos
+						</a>
+					</li>
+					<li>
+						<a href="/Sponsor" className="header-link">
+							Sponsor
+						</a>
+					</li>
+				</ul>
+			</div>
+
 			<div className="sesiones">
 				{usuario ? (
 					<>

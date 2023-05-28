@@ -16,9 +16,7 @@ class ListCategoriesView(APIView):
                 item = {}
                 item['id'] = user.id
                 item['name'] = user.name
-
                 result.append(item)
-
             return JsonResponse({'Categories': result}, status=status.HTTP_200_OK)
         else:
             return JsonResponse({'error': 'No Categories found'}, status=status.HTTP_404_NOT_FOUND)

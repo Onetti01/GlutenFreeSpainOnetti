@@ -1,6 +1,6 @@
 /** @format */
 
-import MainLayout from "hocs/layouts/MainLayout";
+import MainLayout from "layouts/MainLayout";
 
 function Error() {
 	return (

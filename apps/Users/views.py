@@ -7,10 +7,14 @@ from .serializers import UserSerializer
 from django.views.decorators.csrf import csrf_exempt
 
 
+from django.core.signing import TimestampSigner
+
+
 def set_login_cookie(response, user):
-    response.set_cookie('user_id', user.id)
-    response.set_cookie('name', user.name)
-    response.set_cookie('email', user.email)
+    signer = TimestampSigner()
+    response.set_signed_cookie('user_id', str(user.id), salt='user_id')
+    response.set_signed_cookie('name', user.name, salt='name')
+    response.set_signed_cookie('email', user.email, salt='email')
 
 
 class ListUsersView(APIView):
@@ -64,7 +68,6 @@ class CustomLoginView(APIView):
             if user.check_password(password):
                 response = JsonResponse(
                     {'message': 'Login successful'}, status=status.HTTP_200_OK)
-                # Guarda las cookies de inicio de sesión
                 set_login_cookie(response, user)
                 return response
             else:

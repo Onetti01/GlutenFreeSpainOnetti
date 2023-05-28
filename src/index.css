@@ -14,12 +14,16 @@ code {
     monospace;
 }
 
+h2{
+  color: white;
+}
+
 footer {
   width: 100%;
   height: 100px;
-  background-color: #5f9ea0;
-  background-image: url("assets/img/pagePattern_blue.png");
-  background-repeat: repeat;
+  background-color: #61338b;
+  /* background-image: url("assets/img/pagePattern_blue.png"); */
+  /* background-repeat: repeat; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,9 +38,14 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("assets/img/pagePattern_beige.png");
+  background-color: #292929 ;
+  /* background-image: url("assets/img/pagePattern_beige.png"); */
   background-repeat: repeat;
   z-index: 0;
+}
+
+hr{
+  border-color: transparent;
 }
 
 html {
@@ -56,7 +65,6 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  width: 100%;
 }
 
 .sesiones button {
@@ -129,7 +137,6 @@ a {
   border-radius: 7px;
   display: flex;
   width: 100%;
-  flex-direction: row;
   margin-bottom: 15px;
   padding: 10px;
 }
@@ -202,10 +209,11 @@ form {
   margin: 0px 20px;
 }
 
-.register{
+.register {
   margin-bottom: 20px;
 }
 
-.custom-link:hover, a:not(.header-link):hover{
+.custom-link:hover,
+a:not(.header-link):hover {
   text-decoration: underline;
 }

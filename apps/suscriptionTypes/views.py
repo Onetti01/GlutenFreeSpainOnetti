@@ -18,9 +18,9 @@ class ListsuscriptionTypesView(APIView):
                 item['name'] = user.name
                 item['description'] = user.description
                 item['price'] = user.price
-
+                item['footer'] = user.footer
+                item['productScreen'] = user.productScreen
                 result.append(item)
-
             return JsonResponse({'suscriptionTypes': result}, status=status.HTTP_200_OK)
         else:
             return JsonResponse({'error': 'No suscriptionTypes found'}, status=status.HTTP_404_NOT_FOUND)

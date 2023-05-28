@@ -9,6 +9,7 @@ import Login from "pages/Login";
 import Register from "pages/Register";
 import Products from "pages/Products";
 import IndvProduct from "pages/IndvProduct";
+import Sponsor from "pages/Sponsor";
 
 function App() {
 	return (
@@ -27,6 +28,8 @@ function App() {
 				<Route
 					path="/Products/:id"
 					element={<IndvProduct></IndvProduct>}></Route>
+
+				<Route path="/Sponsor" element={<Sponsor></Sponsor>}></Route>
 			</Routes>
 		</Router>
 	);

@@ -3,12 +3,13 @@ from .models import *
 
 
 class ProductsSerializer(serializers.ModelSerializer):
-    class Meta: 
-        model=Bills
-        fields=[
+    class Meta:
+        model = Bills
+        fields = [
             'id',
             'is_paid',
             'CIF_sponsor',
-            'pdf',
             'suscription',
+            "subscription_date",
+            "expiration_date"
         ]
